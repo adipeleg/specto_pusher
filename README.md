@@ -14,6 +14,11 @@ https://github.com/scouten/sqlite_ecto2
 we use webpack, but I don't expect we'll use it much.
 we should prefer a simple round-trip UI & static pages.
 
+### Admin UI
+see [ExAdmin](https://github.com/smpallen99/ex_admin)
+
+check `mix phoenix.routes` for available routes.
+
 ------------------------------------------
 
 To start your Phoenix app:
