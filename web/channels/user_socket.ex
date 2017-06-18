@@ -2,7 +2,7 @@ defmodule SpectoPusher.UserSocket do
   use Phoenix.Socket
 
   ## Channels
-  # channel "room:*", SpectoPusher.RoomChannel
+  channel "room:*", SpectoPusher.RoomChannel
 
   ## Transports
   transport :websocket, Phoenix.Transports.WebSocket
