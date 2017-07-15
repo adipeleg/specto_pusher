@@ -50,8 +50,8 @@ docker pull phusion/baseimage
 dickerfile created using this tutorial:
 https://gist.github.com/brienw/85db445a0c3976d323b859b1cdccef9a
 
-sanity check:
-compile and run (without docker):
+build a new release:
+important!!! make sure you have config/prod.secret.exs file
 
 mix do deps.get, compile
 MIX_ENV=prod mix phoenix.digest
@@ -61,10 +61,9 @@ MIX_ENV=prod mix release
 rel/specto_pusher/bin/specto_pusher console
 
 
-name = specto_pusher
 run docker:
-docker build specto_pusher .
-docker run -p 8888:8888 --name specto_pusher -d specto_pusher
+docker build -t specto_pusher .
+docker run -p 4000:4000 --name specto_pusher -d specto_pusher
 
 stop:
 docker stop specto_pusher
